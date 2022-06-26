@@ -276,9 +276,10 @@ class Metro:
         """
         t = datetime.now()
         s = str(t - self.start_time).split(':')
-        s[0] = '{:0>2}'.format(int(s[0]))
-        s[1] = '{:0>2}'.format(int(s[1]))
-        s[2] = '{:0>2}'.format(int(eval(s[2])))
+        s[-3] = '{:0>2}'.format(int(s[-3]))
+        s[-2] = '{:0>2}'.format(int(s[-2]))
+        s[-1] = '{:0>2}'.format(int(eval(s[-1])))
+        s = s[-3:]
         s = ':'.join(s)
         self.text_time['text'] = f'{s}  {self.current_beat + 1}'
 
