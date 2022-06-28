@@ -1,5 +1,5 @@
 """
-功能：建立节拍器-tkinter对象，变速+和弦训练
+功能：建立节拍器-tkinter对象，变速节拍
 时间：2022年6月26日21:35:15
 作者：陈子含
 """
@@ -19,7 +19,6 @@ def music_play(music, drum):
         mixer.music.set_volume(1)
         mixer.music.load('sound/' + music[drum])
         mixer.music.play()
-
 
 
 class Metro:
@@ -422,18 +421,6 @@ class VariableSpeed(tk.Toplevel):
         h = obj.winfo_reqheight()
         obj.place(x=self.WIDTH * ix - w / 2, y=self.HEIGHT * iy - h / 2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-m = Metro()
-m.main()
+if __name__ == '__main__':
+    m = Metro()
+    m.main()
