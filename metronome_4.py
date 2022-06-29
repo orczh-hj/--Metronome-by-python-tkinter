@@ -141,9 +141,9 @@ class Metro:
             self.win.update()
             self.speed *= 1
             self.win.after(10, self.StopMove)
-            if self.speed[0] > 3:
+            if self.speed[0] > 0:
                 self.speed[0] -= 1
-            if self.speed[1] > 3:
+            if self.speed[1] > 0:
                 self.speed[1] -= 1
 
     def is_out(self):
