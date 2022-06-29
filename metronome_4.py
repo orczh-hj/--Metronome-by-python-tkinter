@@ -142,9 +142,9 @@ class Metro:
             self.speed *= 1
             self.win.after(10, self.StopMove)
             if abs(self.speed[0]) > 0:
-                self.speed[0] -= 1
+                self.speed[0] -= int(self.speed[0] / abs(self.speed[0]))
             if abs(self.speed[1]) > 0:
-                self.speed[1] -= 1
+                self.speed[1] -= int(self.speed[1] / abs(self.speed[1]))
 
     def is_out(self):
         x1, y1 = self.win.winfo_x(), self.win.winfo_y()
