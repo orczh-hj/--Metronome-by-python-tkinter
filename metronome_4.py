@@ -111,7 +111,7 @@ class Metro:
             self.var_speed()
 
     def var_speed(self):
-        if self.is_start:
+        if self.is_start and self.variable_speed:
             t = Timer(self.variable_speed[1], self.var_speed)
             t.start()
             self.bpm_up(self.variable_speed[2])
@@ -128,6 +128,7 @@ class Metro:
             self.start_time = datetime.now()
         else:
             self.text_time['text'] = ''
+            self.variable_speed = None
 
     def StartMove(self, event):
         self.speed = [0, 0]
